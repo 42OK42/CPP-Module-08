@@ -6,7 +6,7 @@
 #    By: okrahl <okrahl@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/09 15:19:54 by okrahl            #+#    #+#              #
-#    Updated: 2025/01/06 11:03:23 by okrahl           ###   ########.fr        #
+#    Updated: 2025/01/06 11:51:58 by okrahl           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ OBJ_DIR = obj
 INCLUDE_DIR = incl
 
 # Target
-TARGET = easyfind
+TARGET = mutant
 
 # Source and object files
 SRCS = $(wildcard $(SRC_DIR)/*.cpp)
