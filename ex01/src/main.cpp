@@ -6,7 +6,7 @@
 /*   By: okrahl <okrahl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 11:23:23 by okrahl            #+#    #+#             */
-/*   Updated: 2025/01/06 11:31:22 by okrahl           ###   ########.fr       */
+/*   Updated: 2025/02/05 13:23:38 by okrahl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,15 +52,20 @@ int main() {
 
 		// Test with 10000 numbers
 		Span bigSpan(10000);
-		std::vector<int> numbers;
-		srand(42);
-		
-		for (int i = 0; i < 10000; ++i) {
-			numbers.push_back(rand());
+
+		// Initialize random seed with current time
+		std::srand(static_cast<unsigned int>(std::time(NULL)));
+
+		std::cout << "\nAdding 10000 random numbers..." << std::endl;
+
+		// Create a vector with 10000 random numbers
+		std::vector<int> randomNumbers;
+		for (int i = 0; i < 10000; i++) {
+			randomNumbers.push_back(rand());
 		}
-		
-		bigSpan.addRange(numbers.begin(), numbers.end());
-		
+
+		bigSpan.addRange(randomNumbers.begin(), randomNumbers.end());
+
 		std::cout << "\nBig Span Test (10000 numbers):" << std::endl;
 		std::cout << "Shortest span: " << bigSpan.shortestSpan() << std::endl;
 		std::cout << "Longest span: " << bigSpan.longestSpan() << std::endl;

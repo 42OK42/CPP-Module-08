@@ -6,7 +6,7 @@
 /*   By: okrahl <okrahl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 11:22:35 by okrahl            #+#    #+#             */
-/*   Updated: 2025/01/06 11:24:27 by okrahl           ###   ########.fr       */
+/*   Updated: 2025/02/05 12:50:14 by okrahl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 # include <algorithm>
 # include <stdexcept>
 
-class Span {
+class Span
+{
 private:
 	unsigned int _N;              // Max ammount of numbers
 	std::vector<int> _numbers;    // Vector to save numbers in
@@ -34,7 +35,7 @@ public:
 	unsigned int shortestSpan() const;
 	unsigned int longestSpan() const;
 
-	// Bonus: Add multiple numbers at once
+	// Add multiple numbers at once
 	template<typename Iterator>
 	void addRange(Iterator begin, Iterator end) {
 		if (_numbers.size() + std::distance(begin, end) > _N)

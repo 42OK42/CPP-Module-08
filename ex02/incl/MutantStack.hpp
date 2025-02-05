@@ -6,13 +6,13 @@
 template<typename T>
 class MutantStack : public std::stack<T> {
 public:
-    // Typedefs für die Iterator-Typen
+    // Typedefs for Iterator-Types
     typedef typename std::stack<T>::container_type::iterator iterator;
     typedef typename std::stack<T>::container_type::const_iterator const_iterator;
     typedef typename std::stack<T>::container_type::reverse_iterator reverse_iterator;
     typedef typename std::stack<T>::container_type::const_reverse_iterator const_reverse_iterator;
 
-    // Konstruktoren
+    // Constructors
     MutantStack() : std::stack<T>() {}
     MutantStack(const MutantStack& other) : std::stack<T>(other) {}
     ~MutantStack() {}
@@ -23,7 +23,7 @@ public:
         return *this;
     }
 
-    // Iterator-Methoden
+    // Iterator-Methods
     iterator begin() { return this->c.begin(); }
     iterator end() { return this->c.end(); }
     const_iterator begin() const { return this->c.begin(); }

@@ -4,7 +4,7 @@
 
 int main()
 {
-	// Test mit MutantStack
+	// Test with MutantStack
 	{
 		MutantStack<int> mstack;
 		mstack.push(5);
@@ -36,7 +36,7 @@ int main()
 		std::cout << std::endl;
 	}
 	
-	// Vergleichstest mit std::list
+	// compare with std::list
 	{
 		std::list<int> lst;
 		lst.push_back(5);
